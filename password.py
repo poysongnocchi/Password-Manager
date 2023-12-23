@@ -14,7 +14,10 @@ def add_passwords():
     username = input("Enter the username for this service: ")
     user_password = input("Enter the password you want to save (at least 6 characters): ")
 
-
+    # Shows user previously stored data
+def show_passwords():
+    for pw in passwords:
+        print("service: " + pw["service"] + ", username: " + pw["username"] + ", password: " + pw["password"])
 
 
 
