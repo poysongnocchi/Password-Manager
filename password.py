@@ -40,6 +40,10 @@ def generate_password():
     for i in range(0,4): # iterate 4 times
         random_password += get_random_special_char() #random character is appended to random passwords
 
+    print(random_password)          
+    pyperclip.copy(random_password) #gets copied automatically to clipboard
+    print(Fore.CYAN + "Your password has been copied to the clipboard ")       
+
 def main():
     while True:
         # Display Menu
