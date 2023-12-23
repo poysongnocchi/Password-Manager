@@ -1,4 +1,17 @@
-def choice_menu():
+
+def add_passwords():
+    # Get users input
+    user_service = input("Eenter the service for this password: ")
+    username = input("Enter the username for this service: ")
+    user_password = input("Enter the password you want to save (at least 6 characters): ")
+
+
+
+
+
+
+
+def main():
     while True:
         # Display Menu
         print("\nPassword Manager")
@@ -8,3 +21,16 @@ def choice_menu():
         print("4. Exit App")
 
         choice = input("Enter your choice: ")
+
+        # Handle users input
+        if choice == '1':
+            show_passwords()
+        elif choice == '2':
+            add_passwords()
+        elif choice == '3':
+            generate_password()
+        elif choice == '4':
+            print("Exiting. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please enter a valid option.")
