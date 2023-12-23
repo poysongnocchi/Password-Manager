@@ -32,7 +32,13 @@ def get_random_special_char():
     random_special = special_chars[index] # give value to random_specials the character at random index
     return random_special
 
-
+def generate_password():
+    random_password = "" #declare random password as empty string
+    for i in range(0,12): #iterate 12 times
+        random_password += get_random_char() #random character is appended to random passwords
+    
+    for i in range(0,4): # iterate 4 times
+        random_password += get_random_special_char() #random character is appended to random passwords
 
 def main():
     while True:
