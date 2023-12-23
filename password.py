@@ -1,4 +1,13 @@
 
+
+passwords = []
+    # Stores user data
+def insert_password(service, username, password):
+    data = {"service": service, "username": username, "password": password}
+    passwords.append(data)
+    print("Password added successfully")
+
+
 def add_passwords():
     # Get users input
     user_service = input("Eenter the service for this password: ")
