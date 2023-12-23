@@ -1,4 +1,5 @@
-
+import random
+import pyperclip
 
 passwords = []
     # Stores user data
@@ -19,7 +20,17 @@ def show_passwords():
     for pw in passwords:
         print("service: " + pw["service"] + ", username: " + pw["username"] + ", password: " + pw["password"])
 
+def get_random_char():
+    uppercase_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwyxz"
+    index = random.randint(0,51) # give value to index as random number between 0-51
+    random_letter = uppercase_letters[index] # give value to random_letters the character at random index
+    return random_letter
 
+def get_random_special_char():
+    special_chars = "!@#$%^&*()_+"
+    index = random.randint(0,11) # give value to index as random number between 0-11
+    random_special = special_chars[index] # give value to random_specials the character at random index
+    return random_special
 
 
 
