@@ -63,13 +63,13 @@ def generate_password():
 def main():
     while True:
         # Display Menu
-        print("\nPassword Manager")
-        print("1. Show Saved Passwords")
+        print(Fore.CYAN + "\nPassword Manager")
+        print(Fore.GREEN + "1. Show Saved Passwords")
         print("2. Add New Password")
         print("3. Generate Strong Password")
         print("4. Exit App")
 
-        choice = input("Enter your choice: ")
+        choice = input(Fore.YELLOW + "Enter your choice: ")
 
         # Handling type error
         try:
