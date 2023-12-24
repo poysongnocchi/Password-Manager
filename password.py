@@ -1,5 +1,14 @@
 import random
 import pyperclip
+import pyfiglet
+from colorama import Fore
+
+ascii_banner = pyfiglet.figlet_format("Welcome to Password Manager")
+print(ascii_banner)
+
+print('\033[1m' + "Your simple tool to remember everithing you cant" + '\033[0m')
+print('\033[1m' +"Store passwords for a service, check your stored passwords or generate a strong one." + '\033[0m')
+print('\033[1m' +"We reccomend you to dont get hacked." + '\033[0m')
 
 passwords = []
     # Stores user data
