@@ -24,6 +24,13 @@ def add_passwords():
     username = input("Enter the username for this service: ")
     user_password = input("Enter the password you want to save (at least 6 characters): ")
 
+    # Handling User Error
+    while len(user_password) < 6:
+        print("Password must be atleast 6 characters: ")
+        user_password = input("Enter the password you want to save: ")
+
+    insert_password(user_service, username, user_password)
+
     # Shows user previously stored data
 def show_passwords():
     for pw in passwords:
