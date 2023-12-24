@@ -71,6 +71,13 @@ def main():
 
         choice = input("Enter your choice: ")
 
+        # Handling type error
+        try:
+            convert_choice = int(choice)
+        except:
+            print(Fore.RED + "Error, Choice must be a number") 
+            continue   
+
         # Handle users input
         if choice == '1':
             show_passwords()
