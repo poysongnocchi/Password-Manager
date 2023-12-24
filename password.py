@@ -90,3 +90,13 @@ def main():
             break
         else:
             print("Invalid choice. Please enter a valid option.")
+
+def test():
+    insert_password("abc","123","password")
+    assert passwords[0]['service'] == "Gmail"
+    assert passwords[0]['username'] == "Test@gmail.com"
+    assert passwords[0]['password'] == "strongpassword1234"
+
+# test() 
+
+main()
