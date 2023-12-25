@@ -51,7 +51,7 @@ def get_random_special_char():
     random_special = special_chars[index] 
     return random_special
 
-def generate_randomnum():
+def get_random_num():
     special_num = "0123456789"
     index = random.randint(0,9) 
     random_num = special_num[index] 
@@ -59,11 +59,14 @@ def generate_randomnum():
 
 def generate_password():
     random_password = "" 
-    for i in range(0,12): 
+    for i in range(0,9): 
         random_password += get_random_char()
     
     for i in range(0,4): 
         random_password += get_random_special_char() 
+    
+    for i in range(0,3): 
+        random_password += get_random_num()
 
     print(random_password)          
     pyperclip.copy(random_password) 
