@@ -65,7 +65,7 @@ def generate_password():
     for i in range(0,4): 
         random_password += get_random_special_char() 
     
-    for i in range(0,3): 
+    for i in range(0,4): 
         random_password += get_random_num()
 
     print(random_password)          
