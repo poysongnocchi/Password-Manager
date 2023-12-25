@@ -38,28 +38,35 @@ def show_passwords():
     for pw in passwords:
         print("service: " + pw["service"] + ", username: " + pw["username"] + ", password: " + pw["password"])
 
+    # Generates strong password
 def get_random_char():
     uppercase_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwyxz"
-    index = random.randint(0,51) # give value to index as random number between 0-51
-    random_letter = uppercase_letters[index] # give value to random_letters the character at random index
+    index = random.randint(0,51) 
+    random_letter = uppercase_letters[index] 
     return random_letter
 
 def get_random_special_char():
     special_chars = "!@#$%^&*()_+"
-    index = random.randint(0,11) # give value to index as random number between 0-11
-    random_special = special_chars[index] # give value to random_specials the character at random index
+    index = random.randint(0,11) 
+    random_special = special_chars[index] 
     return random_special
 
+def generate_randomnum():
+    special_num = "0123456789"
+    index = random.randint(0,9) 
+    random_num = special_num[index] 
+    return random_num
+
 def generate_password():
-    random_password = "" #declare random password as empty string
-    for i in range(0,12): #iterate 12 times
-        random_password += get_random_char() #random character is appended to random passwords
+    random_password = "" 
+    for i in range(0,12): 
+        random_password += get_random_char()
     
-    for i in range(0,4): # iterate 4 times
-        random_password += get_random_special_char() #random character is appended to random passwords
+    for i in range(0,4): 
+        random_password += get_random_special_char() 
 
     print(random_password)          
-    pyperclip.copy(random_password) #gets copied automatically to clipboard
+    pyperclip.copy(random_password) 
     print(Fore.CYAN + "Your password has been copied to the clipboard ")       
 
 def main():
