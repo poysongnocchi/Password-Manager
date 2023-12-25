@@ -45,18 +45,21 @@ def get_random_char():
     random_letter = uppercase_letters[index] 
     return random_letter
 
+    # Generates random special character
 def get_random_special_char():
     special_chars = "!@#$%^&*()_+"
     index = random.randint(0,11) 
     random_special = special_chars[index] 
     return random_special
 
+   # Generates random number
 def get_random_num():
     special_num = "0123456789"
     index = random.randint(0,9) 
     random_num = special_num[index] 
     return random_num
-
+   
+   # Combines previous returns into one password
 def generate_password():
     random_password = "" 
     for i in range(0,9): 
