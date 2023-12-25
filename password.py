@@ -12,10 +12,10 @@ print('\033[1m' +"We reccomend you to dont get hacked." + '\033[0m')
 
 passwords = []
     # Stores user data
-def insert_password(service, username, password):
-    data = {"service": service, "username": username, "password": password}
-    passwords.append(data)
-    print("Password added successfully")
+def insert_password(
+        service, username, password):
+        data = {"service": service, "username": username, "password": password}
+        passwords.append(data)
 
 
 def add_passwords():
@@ -23,6 +23,7 @@ def add_passwords():
     user_service = input("Eenter the service for this password: ")
     username = input("Enter the username for this service: ")
     user_password = input("Enter the password you want to save (at least 6 characters): ")
+    print("Password added successfully")
 
     # Handling User Error
     while len(user_password) < 6:
